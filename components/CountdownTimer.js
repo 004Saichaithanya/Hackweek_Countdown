@@ -4,7 +4,7 @@ export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
-    const endDate = new Date("2025-06-28T23:59:59"); // update to today's date
+    const endDate = new Date("2025-06-28T23:59:59");
 
     const updateTimer = () => {
       const now = new Date();
@@ -12,7 +12,6 @@ export default function CountdownTimer() {
 
       if (diff <= 0) {
         setTimeLeft("HackWeek has ended!");
-        clearInterval(timer);
         return;
       }
 
@@ -24,10 +23,11 @@ export default function CountdownTimer() {
       setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
     };
 
-    updateTimer();
+    updateTimer(); // initialize immediately
     const timer = setInterval(updateTimer, 1000);
-    return () => clearInterval(timer);
+
+    return () => clearInterval(timer); // cleanup on unmount
   }, []);
 
-  return <div>{timeLeft}</div>;
+  return <p>{timeLeft}</p>;
 }
