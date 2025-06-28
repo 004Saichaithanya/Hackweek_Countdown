@@ -1,40 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🚀 HackWeek COSC Countdown App
 
-## Getting Started
+This is a simple Next.js application created for **HackWeek COSC 2025**.  
+It displays event information loaded from a local JSON file and shows a live countdown timer indicating how much time is left until HackWeek ends.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📌 Features
+
+- 📖 Displays event details like title and description from a static JSON file (`/public/info.json`)
+- ⏳ Live countdown timer updating every second until the end of HackWeek
+- ⚡ Fast, client-side rendered application built with **Next.js**
+- 📦 Deployed easily using **Vercel**
+
+---
+
+## 📚 Tech Stack
+
+- **Next.js** (React Framework)
+- **React Hooks** (`useState`, `useEffect`)
+- **Plain CSS (inline styling)** for simple layout
+- **Vercel** for deployment
+
+---
+
+## 📁 Project Structure
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+hackweek-cosc-app/
+├── components/
+│   └── CountdownTimer.js
+├── pages/
+│   └── index.js
+├── public/
+│   └── info.json
+├── package.json
+├── README.md
+└── ...
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+````
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## 🛠️ How to Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/yourusername/hackweek-cosc-app.git
+   cd hackweek-cosc-app
+````
 
-## Learn More
+2. **Install dependencies**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+3. **Start the development server**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. Visit `http://localhost:3000` to view the app.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 🌐 Live Demo
+
+Deployed URL 👉 [https://hackweek-countdown.vercel.app/)
+
+
+---
+
+## 📌 HackWeek Countdown Configuration
+
+The countdown timer is configured to end at:
+
+```
+2025-06-28T23:59:59
+```
+
+To update, modify the date inside `components/CountdownTimer.js`.
+
+---
+
+## 📄 License
+
+This project is made for educational and demo purposes during HackWeek COSC 2025.
+
+---
+
+## 🙌 Author
+
+**Sai Chaithanya Poloju**
